@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Author" content="Abimbola Daniel">
+    <link rel="stylesheet" href="styling.css">
+    <title>Local Transport Tracker</title>
+</head>
+<body>
+    <header >
+        <div class="header_section">
+           <div class="header_content">
+             <div class="brand">
+                <a href="#" class="brand-link">Go meet</a>
+             </div>
+             <button class="nav-toggle" aria-controls="primary-navigation" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="hamburger"></span>
+                <span class="sr-only"></span>
+            </button>
+                <nav class="nav-section">
+                    <ul>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
+            <div class="login_section">
+                <a href="#" class="login">Login</a>
+            </div>
+           </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="enter-section">
+            <div class="all_container">
+                <div class="description">
+               <div class="route-speed">
+                 <h1>Find the fastest <br><span>Route in your city</span></h1> 
+               </div> 
+               <div class="Transport_type">
+                <p>Bus, Okada & Local Transport Options in One place</p>
+               </div>  
+               <div class="input-container" >
+                <form action="result.html" class="form">
+                <div class="location-input">
+                <div class="input-group">
+                    <label for="start" class="start-label">Start Location</label>
+                    <div class="input-with-icon">
+                    <input type="text" placeholder="Enter starting point" required  class="start-input" id="start" name="start">
+                    <button class="locate-me-btn" id="locate-start" type="button">
+                        <svg class="location-pin" viewBox="0 0 24 24">
+                        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                        </svg>
+                    </button>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <label for="destination">Destination</label>
+                    <input type="text" placeholder="Enter destination" class="destination-input" id="destination">
+                </div>
+                <!-- In your form where you have the start location input -->
+                
+                </div>
+                <div>
+                    <button type="submit" class="search" id="search">
+                        Search Route
+                    </button>
+                </div>
+                </form>
+            </div>
+            </div>
+            <div class="img-container">
+                <img src="map.png" alt="map" class="map-img">
+            </div>
+            </div>
+        </section>
+
+        <section class="features-section">
+            <div class="features">
+                <div class="okada"> 
+                <svg width="16" height="16" viewBox="0 0 50 50" fill="none" class="tick">
+                <circle cx="25" cy="25" r="25" fill="#2196F3"/>
+                <path d="M15 25L22 32L35 19" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <p>Live Okada Lookup</p>
+            </div>
+                <div class="okada"> 
+                <svg width="16" height="16" viewBox="0 0 50 50" fill="none" class="tick">
+                <circle cx="25" cy="25" r="25" fill="#2196F3"/>
+                <path d="M15 25L22 32L35 19" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <p>Estimated Prices</p>
+            </div>
+                <div class="okada"> 
+                <svg width="16" height="16" viewBox="0 0 50 50" fill="none" class="tick">
+                <circle cx="25" cy="25" r="25" fill="#2196F3"/>
+                <path d="M15 25L22 32L35 19" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <p>Bus/Okada options 
+            </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer-section" id="footer-section">
+        <p>&copy; 2025 Go meet. All right reserved</p>
+    </footer>
+    <script src="functionality.js"></script>
+</body>
+</html>

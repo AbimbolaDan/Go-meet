@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Author" content="Abimbola Daniel">
+    <title>Result page</title>
+    <link rel="stylesheet" href="styling.css">
+</head>
+<body>
+    <header>
+        <div class="header_section">
+           <div class="header_content">
+             <div class="brand">
+                <a href="./index.html" class="brand-link">Go meet</a>
+             </div>
+              <button class="nav-toggle" aria-controls="primary-navigation" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+                <nav class="nav-section">
+                    <ul>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
+            <div class="login_section">
+                <a href="#" class="login">Login</a>
+            </div>
+           </div>
+        </div>
+    </header>
+    
+    <section id="map-section">
+            <div id="map"></div> 
+    </section>
+
+    <section class="results-section" id="results-section"  style="display: none;">
+        <div class="results-container">
+            <h2 class="Available"></h2>
+            <div class="routes_list" id="routes_list">
+                <p class="loading-spinner">Initializing....</p>
+            </div>
+        </div>
+    </section>
+        <footer class="footer-section Result" id="footer-section">
+        <p>&copy; 2025 Go meet. All right reserved</p>
+        </footer>
+
+        <script src="routing.js" defer></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCcaAasAHCqaMJd1VASBnvnK-gRmiE58k8&callback=initMap&libraries=routes"defer
+        ></script>
+        
+</body>
+</html>
