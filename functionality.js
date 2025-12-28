@@ -142,8 +142,8 @@ document.addEventListener('DOMContentLoaded', function() {
             },
             {
                 enableHighAccuracy: true,
-                timeout: 10000, // 10 seconds
-                maximumAge: 60000 // 1 minute
+                timeout: 10000, 
+                maximumAge: 60000 
             }
         );
     });

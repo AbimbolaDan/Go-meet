@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
         navSection.setAttribute('data-visible', !isExpanded);
         
-        //  body scroll
+       
         if (!isExpanded) {
             body.classList.add('no-scroll'); 
         } else {
@@ -64,11 +64,11 @@ let directionsRenderer;
 
 const routeList = document.getElementById("routes_list");
 const resultSection = document.getElementById("results-section");
-// map Services and Start Routing process
+
 window.initMap = function() {
     map = new google.maps.Map(document.getElementById("map"), {
-        center: { lat: 9.0820, lng: 8.6753 }, // Nigeria's approximate center
-        zoom: 6, // Zoom out to show entire Nigeria
+        center: { lat: 9.0820, lng: 8.6753 }, 
+        zoom: 6, 
         mapTypeControl: false,
         streetViewControl: false,
         fullscreenControl: true,
@@ -132,7 +132,6 @@ function calculateRoute(start, destination) {
 
         const dynamicRoutes =[];
 
-        // calculation for bus
         if(distanceKm > 1.5) {
             const busPrice= BASE_PRICE + Math.ceil(distanceKm * BUS_RATE_PER_KM);
             const busDuration = Math.ceil(durationMins*1.5);
@@ -146,7 +145,6 @@ function calculateRoute(start, destination) {
             });
         }
 
-        //calculations for okada 
         const okadaPrice = BASE_PRICE + Math.ceil(distanceKm* OKADA_RATE_PER_KM);
         const okadaDuration= Math.ceil(durationMins *0.75)
         dynamicRoutes.push({
@@ -158,7 +156,6 @@ function calculateRoute(start, destination) {
             color: 'okadas'
         });
 
-        //calculations for Taxi
         const taxiPrice = BASE_PRICE + Math.ceil(distanceKm * TAXI_RATE_PER_KM);
         const taxiDuration = durationMins+5;
         dynamicRoutes.push({
@@ -177,7 +174,6 @@ function calculateRoute(start, destination) {
         });
     }
 
-   // In routing.js, replace the displayResults function with this:
 
 function displayResults(start, destination, routes) {
     // First check if the Available element exists
@@ -235,7 +231,7 @@ window.onerror = function(msg, url, lineNo, columnNo, error) {
     return false;
 };
 
-// Also add a fallback for Google Maps loading
+
 function gm_authFailure() {
     alert("Google Maps failed to load. Please check your API key.");
     console.error("Google Maps authentication failed");
